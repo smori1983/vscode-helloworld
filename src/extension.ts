@@ -19,14 +19,18 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage('Hello VS Code');
 		vscode.window.setStatusBarMessage('Hello VS Code (status bar)');
 	});
-
 	context.subscriptions.push(disposable1);
 
 	let disposable2 = vscode.commands.registerCommand('helloworld.quickPick', () => {
 		vscode.window.showQuickPick(['a', 'b', 'c', 'd', 'e']);
 	});
-
 	context.subscriptions.push(disposable2);
+
+	let disposable3 = vscode.commands.registerCommand('helloworld.inputBox', async () => {
+		const input = await vscode.window.showInputBox();
+		console.log(input);
+	});
+	context.subscriptions.push(disposable3);
 }
 
 // this method is called when your extension is deactivated

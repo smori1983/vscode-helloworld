@@ -10,18 +10,24 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:helloworld.helloWorld"
+		"onCommand:helloworld.helloWorld",
+		"onCommand:helloworld.quickPick",
+		"onCommand:helloworld.inputBox"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
 				"command": "helloworld.helloWorld",
-				"title": "Hello World"
+				"title": "Hello:World"
 			},
 			{
 				"command": "helloworld.quickPick",
-				"title": "quickPick"
+				"title": "Hello:QuickPick"
+			},
+			{
+				"command": "helloworld.inputBox",
+				"title": "Hello:InputBox"
 			}
 		]
 	},
