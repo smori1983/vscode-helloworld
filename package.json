@@ -18,6 +18,10 @@
 			{
 				"command": "helloworld.helloWorld",
 				"title": "Hello World"
+			},
+			{
+				"command": "helloworld.quickPick",
+				"title": "quickPick"
 			}
 		]
 	},
