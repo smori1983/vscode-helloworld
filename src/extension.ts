@@ -9,8 +9,21 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 	context.subscriptions.push(disposable1);
 
-	let disposable2 = vscode.commands.registerCommand('helloworld.quickPick', () => {
-		vscode.window.showQuickPick(['a', 'b', 'c', 'd', 'e']);
+	let disposable2 = vscode.commands.registerCommand('helloworld.quickPick', async () => {
+		const choices: string[] = [
+			'item:create',
+			'item:update',
+			'item:delete',
+			'user:create',
+			'user:update',
+			'user:delete',
+		];
+		const options: vscode.QuickPickOptions = {
+			title: 'Data operation',
+			placeHolder: 'Choose an operation.',
+		};
+		const choice = await vscode.window.showQuickPick(choices, options);
+		console.log('Selected: ' + choice);
 	});
 	context.subscriptions.push(disposable2);
 
