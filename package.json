@@ -10,6 +10,7 @@
 		"Other"
 	],
 	"activationEvents": [
+		"*",
 		"onCommand:helloworld.helloWorld",
 		"onCommand:helloworld.quickPick",
 		"onCommand:helloworld.inputBox"
